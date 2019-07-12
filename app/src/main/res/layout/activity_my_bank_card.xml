@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.qqlaobing.money.com.example.qqlaobing.Umoney.view.activity.MyBankCardActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/title_bg">
+
+        <ImageView
+            android:id="@+id/tv_exit"
+            android:layout_width="10dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@mipmap/cancel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="30dp"
+            android:text="我的银行卡"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ListView
+        android:divider="#fafafa"
+        android:dividerHeight="10dp"
+        android:scrollbars="none"
+        android:layout_margin="20dp"
+        android:id="@+id/lv_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#F8FAFC"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="com.example.qqlaobing.money.com.example.qqlaobing.Umoney.view.activity.CertificationCenterActivity">
+    <RelativeLayout
+        android:background="@drawable/title_bg"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:id="@+id/tv_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="返回"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:layout_marginLeft="30dp"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="认证中心"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:layout_marginLeft="30dp"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="17dp"
+            android:background="@drawable/renzheng"
+            android:layout_height="20dp" />
+        <TextView
+            android:gravity="center"
+            android:textSize="11sp"
+            android:textColor="#9DA4B7"
+            android:layout_marginLeft="10dp"
+            android:text="认证越多，信用额度越高"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <com.example.qqlaobing.Umoney.view.fragment.ReListView
+        android:scrollbars="none"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="1"
+        android:dividerHeight="10dp"
+        android:divider="#F8FAFC"
+        android:id="@+id/lv_certification"
+        android:background="#F8FAFC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.example.qqlaobing.Umoney.view.fragment.ReListView>
+
+    <Button
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:id="@+id/btn_getamount"
+        android:layout_width="144dp"
+        android:layout_height="38dp"
+        android:background="@drawable/btn_allshap"
+        android:text="立即拿钱"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+</LinearLayout>

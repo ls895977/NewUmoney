@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:padding="10dp"
+        android:background="@drawable/loan_bg"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:id="@+id/rlTimeline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/tvDot"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@mipmap/submit" />
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:id="@+id/tvAcceptStation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#5A617A"
+                android:textSize="16sp" />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/tvAcceptTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2014/06/24 20:55:28"
+                android:textColor="#AEB3C2"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="#9DA4B7"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

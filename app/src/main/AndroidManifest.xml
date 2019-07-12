@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.qqlaobing.Umoney">
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 读取联系人权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" /> <!-- 读sd卡权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.BATTERY_STATS" /> <!-- 8.0安装需要的权限 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 用于写入缓存数据到扩展存储卡 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /> <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application xmlns:tools="http://schemas.android.com/tools"
+        android:name=".application.GeneralApplication"
+        android:allowBackup="true"
+        android:icon="${app_icon}"
+        android:label="${app_name}"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="${app_icon}"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:label">
+        <activity android:name=".view.activity.LoanNextActivity"></activity>
+        <activity android:name=".view.activity.KeFuActivity" />
+        <activity android:name=".view.activity.RenZhengActivity" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity android:name=".view.activity.StartActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.activity.RegisteActivity" />
+        <activity android:name=".view.activity.LoginActivity" />
+        <activity android:name=".view.activity.CertificationCenterActivity" />
+        <activity android:name=".view.activity.LoanActivity" />
+        <activity android:name=".view.activity.BankCardActivity" />
+        <activity android:name=".view.activity.ContactActivity" />
+        <activity android:name=".view.activity.UserInfoActivity" />
+        <activity android:name=".view.activity.WorkCheckActivity" />
+        <activity android:name=".view.activity.WebOpeActivity" />
+        <activity android:name=".view.activity.ZhiMaActivity" />
+        <activity android:name=".view.activity.ZhiFuBaoActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileproviderdzhang"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider> <!-- 高德地图配置 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="5b3626275d4e863f5a7a5b4b47ffebd7" />
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity android:name=".view.activity.AboutUsActivity" />
+        <activity android:name=".shoushijiesuo.AddGestureLockActivity" />
+        <activity android:name=".view.activity.WebActivity" />
+        <activity android:name=".view.activity.AgreeWebActivity" />
+        <activity android:name=".view.activity.QuanActivity" />
+        <activity android:name=".view.activity.MyBankCardActivity" />
+        <activity android:name=".view.activity.ChangePasswordActivity" />
+        <activity android:name=".view.activity.MainActivity" />
+        <activity android:name=".view.activity.AddBankCardActivity" />
+        <activity android:name=".view.activity.CertificationCenterTwoActivity" />
+        <activity android:name=".view.activity.FindPasswordActivity" />
+    </application>
+
+</manifest>

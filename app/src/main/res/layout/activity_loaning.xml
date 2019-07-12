@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/title_bg">
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_cancel"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@mipmap/cancel"
+            android:layout_width="10dp"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="30dp"
+            android:text="当前贷款"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@color/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当天审核，当天到账"
+            android:textColor="#FEF9F2"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:background="#fff"
+            android:layout_marginTop="160dp"
+            android:layout_width="match_parent"
+            android:layout_height="106dp"></LinearLayout>
+        <LinearLayout
+            android:elevation="4dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="50dp"
+            android:id="@+id/ll_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="30dp"
+            android:background="@drawable/center_bg"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_describle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="最高可借额度"
+                    android:textColor="#5A617A"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_limitmoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥10000.00"
+                    android:textColor="#5A617A"
+                    android:textSize="50sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/tv_loansure"
+                    android:background="@drawable/btn_allshap"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:visibility="gone"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="立即还款"
+                    android:id="@+id/tv_loan"
+                    android:background="@drawable/btn_allshap"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+            </LinearLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:background="@drawable/btn_allshap"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:text="我要借钱"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_width="match_parent"
+                android:layout_height="44dp" />
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tv_card_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="******"
+                    android:textColor="#5A617A" />
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:text="金卡"
+                    android:textColor="#5A617A" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:drawableLeft="@mipmap/getperson"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:text="持卡人"
+                    android:textColor="#5A617A" />
+                <TextView
+                    android:drawableLeft="@mipmap/card_item"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:text="卡类型"
+                    android:textColor="#5A617A" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/tv_certificationcenter"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="130dp"
+            android:background="@mipmap/home_gotoget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <com.example.qqlaobing.Umoney.view.fragment.ReListView
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:scrollbars="none"
+        android:id="@+id/lvTrace"
+        android:layout_width="match_parent"
+        android:divider="#fff"
+        android:clickable="false"
+        android:listSelector="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:background="@color/white"
+        android:id="@+id/ll_loanmoney"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="30dp"
+                android:background="@mipmap/message" />
+
+            <cc.ibooker.ztextviewlib.AutoVerticalScrollTextView
+                android:id="@+id/tv_auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp" />
+        </LinearLayout>
+        <com.youth.banner.Banner
+            android:id="@+id/banner_auto"
+            android:layout_width="match_parent"
+            android:layout_height="90dp" />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="#5A617A"
+                    android:gravity="center"
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="借款金额" />
+                <com.example.qqlaobing.Umoney.view.myview.PickerView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:id="@+id/pv_money"
+                    android:visibility="invisible"
+                    android:layout_marginTop="20dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#5A617A"
+                    android:id="@+id/tv_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="借款期限" />
+                <RelativeLayout
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/iv_clock"
+                        android:layout_marginLeft="25dp"
+                        android:layout_centerVertical="true"
+                        android:background="@mipmap/password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <com.example.qqlaobing.Umoney.view.myview.PickerView
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:id="@+id/pv_time"
+                        android:visibility="invisible"
+                        />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+            <ImageView
+                android:background="@mipmap/noshenhe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_marginLeft="50dp"
+                android:background="@mipmap/fast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_marginLeft="50dp"
+                android:background="@mipmap/height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textSize="10sp"
+            android:layout_gravity="center_horizontal"
+            android:text="*不向学生提供贷款*"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

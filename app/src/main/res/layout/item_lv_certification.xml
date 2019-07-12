@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/center_bg"
+    android:layout_centerVertical="true"
+    android:layout_height="50dp">
+    <ImageView
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/iv_icon"
+        android:layout_width="25dp"
+        android:layout_height="25dp" />
+    <TextView
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:id="@+id/tv_cer"
+        android:gravity="center_vertical"
+        android:text="个人信息"
+        android:textSize="14sp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" />
+    <TextView
+        android:layout_centerVertical="true"
+        android:id="@+id/tv_finish"
+        android:gravity="center_vertical"
+        android:text="未认证"
+        android:textColor="#9DA4B7"
+        android:textSize="14sp"
+        android:layout_marginRight="19dp"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="19dp" />
+
+</RelativeLayout>

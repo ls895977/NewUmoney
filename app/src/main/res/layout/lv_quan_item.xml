@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@mipmap/quanbg"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="优惠券"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:gravity="right"
+        android:paddingRight="20dp"
+        android:text="100元"
+        android:textSize="26sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="25dp"
+            android:text="已使用"
+            android:gravity="right"
+            android:textSize="16sp"
+            android:paddingRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_timeto"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:text="100元"
+            android:textSize="16sp"
+            android:paddingRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,39 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.3.1'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:9.0.0'
+    }
+}
+
+allprojects {
+    /*  version = VERSION_NAME
+      group = GROUP*/
+    repositories {
+
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        maven { url "https://jitpack.io" }
+        jcenter()
+    }
+}
+configurations.all {
+
+    resolutionStrategy {
+
+        force 'com.android.support:support-v4:27.1.0'
+
+    }
+
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

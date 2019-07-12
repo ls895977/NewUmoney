@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingTop="20dp"
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp"
+    android:paddingBottom="10dp"
+    android:orientation="vertical"
+    android:background="@drawable/lv_bg"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/tv_number"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="#9DA4B7"
+            android:text="单号：1234567"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_look"
+            android:layout_toRightOf="@+id/tv_number"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/colorAccent"
+            android:text="[点击查看]"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_mark"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:padding="3dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_allshap"
+            android:textColor="#fff"
+            android:text="已放款"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <TextView
+        android:background="#EBEEF5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="#9DA4B7"
+                android:layout_marginTop="10dp"
+                android:text="贷款金额(元)"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_loanmoney"
+                android:text="5000.00"
+                android:textColor="#5A617A"
+                android:textSize="30sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_wenhao"
+                android:drawableRight="@mipmap/wenhao"
+                android:drawablePadding="5dp"
+                android:layout_marginTop="10dp"
+                android:text="综合服务费"
+                android:textColor="#9DA4B7"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_servicemoney"
+                android:text="5000.00"
+                android:textColor="#9DA4B7"
+                android:textSize="30sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </RelativeLayout>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:background="#EBEEF5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:text="到期时间"
+                android:textSize="14sp"
+                android:textColor="#9DA4B7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:id="@+id/tv_year"
+                android:text="2018-06-02"
+                android:textColor="#7B7D87"
+                android:textSize="16sp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_time"
+                android:text="17:55:33"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="#9DA4B7"
+                android:text="剩余还款日(天)"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/tv_remaintime"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="已逾期2天"
+                android:textColor="#33A0FF"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="逾期服务费"
+                android:textColor="#9DA4B7"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/tv_interest"
+                android:text=""
+                android:textColor="#33A0FF"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:gravity="center"
+        android:textSize="12sp"
+        android:layout_marginTop="10dp"
+        android:textColor="#ff3b30"
+        android:text="【放款机构提醒】逾期信息将纳入征信与信用中国数据库"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

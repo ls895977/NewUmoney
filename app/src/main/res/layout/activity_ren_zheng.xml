@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.qqlaobing.Umoney.view.activity.RenZhengActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/title_bg">
+        <ImageView
+            android:id="@+id/iv_cancel"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@mipmap/cancel"
+            android:layout_width="10dp"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="30dp"
+            android:text="认证步骤"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="63dp">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_one"
+                android:layout_marginLeft="20dp"
+                android:background="@mipmap/one_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:background="#D1D1D1"
+                android:layout_width="30dp"
+                android:layout_height="1dp" />
+            <ImageView
+                android:id="@+id/iv_two"
+                android:background="@mipmap/two_rengzheng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:background="#D1D1D1"
+                android:layout_width="30dp"
+                android:layout_height="1dp" />
+            <ImageView
+                android:id="@+id/iv_three"
+                android:background="@mipmap/three_renzheng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:background="#D1D1D1"
+                android:layout_width="30dp"
+                android:layout_height="1dp" />
+            <ImageView
+                android:id="@+id/iv_four"
+                android:background="@mipmap/four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:background="#D1D1D1"
+                android:layout_width="30dp"
+                android:layout_height="1dp" />
+            <ImageView
+                android:id="@+id/iv_five"
+                android:background="@mipmap/five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:background="#D1D1D1"
+                android:layout_width="30dp"
+                android:layout_height="1dp" />
+            <ImageView
+                android:id="@+id/iv_six"
+                android:background="@mipmap/six"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/fl_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+</LinearLayout>

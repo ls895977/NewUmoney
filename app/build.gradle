@@ -1,0 +1,259 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+
+        flavorDimensions "default"
+        applicationId "com.example.qqlaobing.Umoney"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 6
+        versionName "1.2.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+        splits {
+            abi {
+                enable true
+                reset()
+                include 'x86', 'armeabi-v7a', 'x86_64'
+                universalApk true
+            }
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+//    configurations.all {
+//        resolutionStrategy {
+//            force 'com.android.support:support-v4:27.1.1'
+//        }}
+    productFlavors {
+        app1 {
+            manifestPlaceholders = [str: "devStr", package_name: "com.example.qqlaobing.yimiaodao"]
+            applicationId "com.example.qqlaobing.yimiaodao"
+            buildConfigField "String", "BASE_URL", '"//211.149.180.198/api"'
+//            buildConfigField "String", "BASE_URL", '"//api.360rongyanyne.org"'
+            manifestPlaceholders = [app_name: "易秒到",
+                                    app_icon: "@mipmap/yimiaodao"]
+        }
+        app23 {
+            manifestPlaceholders = [str: "devStr", package_name: "com.example.qqlaobing.yimiaodao"]
+            applicationId "com.example.qqlaobing.yimiaodao"
+            buildConfigField "String", "BASE_URL", '"//211.149.179.185/api"'
+            manifestPlaceholders = [app_name: "易秒到",
+                                    app_icon: "@mipmap/yimiaodao"]
+        }
+        app0 {
+            manifestPlaceholders = [str: "devStr", package_name: "com.example.qqlaobing.jingdou"]
+            applicationId "com.example.qqlaobing.jingdou"
+            buildConfigField "String", "BASE_URL", '"//211.149.165.160/api"'
+//            buildConfigField "String", "BASE_URL", '"//api.360rongyanyne.org"'
+            manifestPlaceholders = [app_name: "U金豆",
+                                    app_icon: "@mipmap/ujingdou"]
+        }
+
+        app2 {
+            manifestPlaceholders = [str: "devStr", package_name: "com.example.qqlaobing.ujie"]
+            applicationId "com.example.qqlaobing.ujie"
+            buildConfigField "String", "BASE_URL", '"//211.149.157.112/api"'
+            manifestPlaceholders = [app_name: "U借",
+                                    app_icon: "@mipmap/ujie"]
+        }
+        app3 {
+            manifestPlaceholders = [str: "devStr", package_name: "com.example.qqlaobing.uqianmi"]
+            applicationId "com.example.qqlaobing.uqianmi"
+            buildConfigField "String", "BASE_URL", '"//211.149.162.28/api"'
+            manifestPlaceholders = [app_name: "U易钱秘",
+                                    app_icon: "@mipmap/uqianmi"]
+        }
+        app4 {
+            manifestPlaceholders = [str: "devStr", package_name: "com.example.qqlaobing.yijie"]
+            applicationId "com.example.qqlaobing.yijie"
+            buildConfigField "String", "BASE_URL", '"//211.149.162.167/api"'
+            manifestPlaceholders = [app_name: "U易花",
+                                    app_icon: "@mipmap/uyihua"]
+        }
+        app5 {
+            manifestPlaceholders = [str: "devStr", package_name: "com.example.qqlaobing.uxin"]
+            applicationId "com.example.qqlaobing.uxin"
+            buildConfigField "String", "BASE_URL", '"//211.149.190.158/api"'
+            manifestPlaceholders = [app_name: "U信",
+                                    app_icon: "@mipmap/uxin"]
+        }
+        app6 {
+            manifestPlaceholders = [str: "devStr", package_name: "com.example.qqlaobing.sdai"]
+            applicationId "com.example.qqlaobing.sdai"
+            buildConfigField "String", "BASE_URL", '"//211.149.212.50/api"'
+            manifestPlaceholders = [app_name: "S贷",
+                                    app_icon: "@mipmap/usdai"]
+        }
+        app7 {
+            manifestPlaceholders = [str: "devStr", package_name: "com.example.qqlaobing.yisu"]
+            applicationId "com.example.qqlaobing.yisu"
+            buildConfigField "String", "BASE_URL", '"//211.149.154.75/api"'
+            manifestPlaceholders = [app_name: "易速",
+                                    app_icon: "@mipmap/uyisu"]
+        }
+        app8 {
+            manifestPlaceholders = [str: "devStr", package_name: "com.example.qqlaobing.daishu"]
+            applicationId "com.example.qqlaobing.daishu"
+            buildConfigField "String", "BASE_URL", '"//211.149.182.34/api"'
+            manifestPlaceholders = [app_name: "袋鼠",
+                                    app_icon: "@mipmap/udaishu"]
+        }
+        app9 {
+            manifestPlaceholders = [str: "devStr", package_name: "com.example.qqlaobing.peiqi"]
+            applicationId "com.example.qqlaobing.peiqi"
+            buildConfigField "String", "BASE_URL", '"//211.149.214.82/api"'
+            manifestPlaceholders = [app_name: "佩奇",
+                                    app_icon: "@mipmap/upeiqi"]
+        }
+        app10 {
+            manifestPlaceholders = [str: "devStr", package_name: "com.example.qqlaobing.ukuaisu"]
+            applicationId "com.example.qqlaobing.ukuaisu"
+            buildConfigField "String", "BASE_URL", '"//211.149.191.33/api"'
+            manifestPlaceholders = [app_name: "快速",
+                                    app_icon: "@mipmap/ukuaisu"]
+        }
+        app11 {
+            manifestPlaceholders = [str: "devStr", package_name: "com.example.qqlaobing.maodou"]
+            applicationId "com.example.qqlaobing.maodou"
+            buildConfigField "String", "BASE_URL", '"//211.149.145.33/api"'
+            manifestPlaceholders = [app_name: "毛豆",
+                                    app_icon: "@mipmap/maodou"]
+        }
+        app12 {
+            manifestPlaceholders = [str: "devStr", package_name: "com.example.qqlaobing.kuaijie"]
+            applicationId "com.example.qqlaobing.kuaijie"
+            buildConfigField "String", "BASE_URL", '"//211.149.182.171/api"'
+            manifestPlaceholders = [app_name: "快捷",
+                                    app_icon: "@mipmap/kuaijie"]
+        }
+        app13 {
+            manifestPlaceholders = [str: "devStr", package_name: "com.example.qqlaobing.yijie"]
+            applicationId "com.example.qqlaobing.yijie"
+            buildConfigField "String", "BASE_URL", '"//211.149.178.194/api"'
+            manifestPlaceholders = [app_name: "易捷",
+                                    app_icon: "@mipmap/yijie"]
+        }
+        app14 {
+            manifestPlaceholders = [str: "devStr", package_name: "com.example.qqlaobing.oyi"]
+            applicationId "com.example.qqlaobing.oyi"
+            buildConfigField "String", "BASE_URL", '"//211.149.188.95/api"'
+            manifestPlaceholders = [app_name: "O易",
+                                    app_icon: "@mipmap/oyi"]
+        }
+        app15 {
+            manifestPlaceholders = [str: "devStr", package_name: "com.example.qqlaobing.suyi"]
+            applicationId "com.example.qqlaobing.suyi"
+            buildConfigField "String", "BASE_URL", '"//211.149.180.75/api"'
+            manifestPlaceholders = [app_name: "速易",
+                                    app_icon: "@mipmap/suyi"]
+        }
+        app16 {
+            manifestPlaceholders = [str: "devStr", package_name: "com.example.qqlaobing.yidaixiong"]
+            applicationId "com.example.qqlaobing.yidaixiong"
+            buildConfigField "String", "BASE_URL", '"//211.149.188.20/api"'
+            manifestPlaceholders = [app_name: "易袋熊",
+                                    app_icon: "@mipmap/yidaixiong"]
+        }
+        app17 {
+            manifestPlaceholders = [str: "devStr", package_name: "com.example.qqlaobing.youqian"]
+            applicationId "com.example.qqlaobing.youqian"
+            buildConfigField "String", "BASE_URL", '"//211.149.165.32/api"'
+            manifestPlaceholders = [app_name: "有钱钱包",
+                                    app_icon: "@mipmap/youqian"]
+        }
+        app18 {
+            manifestPlaceholders = [str: "devStr", package_name: "com.example.qqlaobing.Shandaozhang"]
+            applicationId "com.example.qqlaobing.Shandaozhang"
+            buildConfigField "String", "BASE_URL", '"//211.149.179.140/api"'
+            manifestPlaceholders = [app_name: "闪到账",
+                                    app_icon: "@mipmap/sandaozhang"]
+        }
+        app19 {
+            manifestPlaceholders = [str: "devStr", package_name: "com.example.qqlaobing.Yupaopaojinrong"]
+            applicationId "com.example.qqlaobing.Yupaopaojinrong"
+            buildConfigField "String", "BASE_URL", '"//211.149.191.33/api"'
+            manifestPlaceholders = [app_name: "鱼泡泡金融",
+                                    app_icon: "@mipmap/yupaopao"]
+        }
+        app20 {
+            manifestPlaceholders = [str: "devStr", package_name: "com.example.qqlaobing.Uyihua"]
+            applicationId "com.example.qqlaobing.Uyihua"
+            buildConfigField "String", "BASE_URL", '"//211.149.196.175/api"'
+            manifestPlaceholders = [app_name: "悠易花",
+                                    app_icon: "@mipmap/uyihuashualian"]
+        }
+        app21 {
+            manifestPlaceholders = [str: "devStr", package_name: "com.example.qqlaobing.Oyi"]
+            applicationId "com.example.qqlaobing.Oyi"
+            buildConfigField "String", "BASE_URL", '"//211.149.194.148/api"'
+            manifestPlaceholders = [app_name: "O易",
+                                    app_icon: "@mipmap/oyi"]
+        }
+        app22 {
+            manifestPlaceholders = [str: "devStr", package_name: "com.example.qqlaobing.huitong"]
+            applicationId "com.example.qqlaobing.huitong"
+            buildConfigField "String", "BASE_URL", '"//211.149.172.185/api"'
+            manifestPlaceholders = [app_name: "汇通钱包",
+                                    app_icon: "@mipmap/huitong"]
+        }
+
+    }
+}
+
+
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+////        exclude group: 'com.android.support', module: 'support-annotations'
+//    })
+    implementation files('libs/volley.jar')
+    implementation "com.android.support:design:28.0.0"
+    implementation 'com.umeng.sdk:common:1.5.3'
+    implementation 'com.umeng.sdk:analytics:7.5.3'
+    implementation 'com.teprinciple:updateapputils:1.4'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.qiniu:qiniu-android-sdk:7.3.15'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'io.reactivex:rxjava:1.1.6'
+    implementation 'com.lovedise:permissiongen:0.0.6'
+    implementation 'top.zibin:Luban:1.1.5'
+    implementation 'com.github.maning0303:MNUpdateAPK:V2.0.3'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation 'com.qiniu:happy-dns:0.2.13'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.squareup.okio:okio:1.14.0'
+    implementation 'com.githang:status-bar-compat:0.7'
+    testImplementation 'junit:junit:4.12'
+    implementation name: 'UDSDKV4.0.LL181218.20181225', ext: 'aar'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.android.support:support-v13:28.0.0'
+    implementation 'com.youth.banner:banner:1.4.10'
+    implementation 'com.github.zrunker:ZTextView:v1.0.2'
+    implementation 'com.jakewharton:butterknife-compiler:9.0.0'
+    implementation('com.jakewharton:butterknife:9.0.0') {
+
+    }
+}
